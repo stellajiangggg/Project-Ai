@@ -205,3 +205,33 @@ We performed PCA on the standardized stack of five features: B02, B04, B08, NDVI
 | Random Forest (RF)      | 100%     | 1.00      | 1.00   | NDWI Mask        | High             |
 
 ```
+## 5. Environmental Cost Assessment
+
+This project was developed and executed on Google Colab, involving approximately **50 hours** of compute time and the processing of **~2 GB** of Sentinel-2 imagery. The workflow included NDVI/NDWI index calculation, K-Means clustering, Random Forest classification, and dimensionality reduction using PCA and UMAP.
+
+### Energy Consumption and Emissions
+
+Assuming typical Colab backends (NVIDIA T4 or P100 GPUs), estimated energy consumption ranged between **3.5 and 12.5 kWh**, depending on hardware allocation and runtime utilization. Based on average global grid intensity (~400 gCO₂/kWh), this corresponds to approximately **2–6 kg of CO₂ emissions**. Although Google offsets its electricity use with renewable energy, actual environmental impact still depends on regional energy sourcing.
+
+### Infrastructure and Algorithmic Efficiency
+
+While GPU acceleration enhances computational efficiency, several components such as PCA and Random Forest, are CPU-bound in standard scikit-learn implementations. This may have reduced hardware efficiency and extended overall runtime. The workflow remains substantially less energy-intensive than deep learning pipelines, but nonetheless involved non-trivial compute costs due to high-resolution satellite data and iterative modeling.
+
+### Broader Environmental Considerations
+
+From an indirect impact perspective, the project aims to contribute positively to environmental monitoring, particularly in delineating land-water boundaries using publicly available EO data. Applications of this type can support decision-making in water resource management and ecosystem monitoring.
+
+However, repeated use of cloud computing for experimentation, especially without resource-aware practices, can scale environmental costs. Thus, sustainable use of compute is essential, even for academic applications.
+
+### Mitigation Strategies
+
+The following practices were considered or are recommended to reduce environmental impact:
+
+- Using cropped subsets of imagery during development to reduce compute demand.
+- Caching intermediate outputs (e.g. NDVI arrays, model predictions) to avoid recomputation.
+- Selecting classical, interpretable models (e.g. Random Forest) over resource-intensive alternatives.
+- Shutting down idle Colab runtimes to minimize background energy usage.
+- Adopting pre-trained or open-source classification models where applicable.
+
+Going forward, applying profiling tools and lightweight algorithms will further reduce the environmental cost of similar workflows.
+

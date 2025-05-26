@@ -44,7 +44,7 @@ Note: Within each `.SAFE` folder, `GRANULE` contains `.jp2` band images, which a
 
 
 
-## 2. Methodology Diagrams (Remote Sensing and AI Implementation)
+## 2. Methodology Diagrams 
 
 To fulfill the requirement of illustrating both the remote sensing techniques and the AI pipeline used in this project, the following diagrams provide a clear visual summary.
 

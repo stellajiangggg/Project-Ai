@@ -179,6 +179,19 @@ We performed PCA on the standardized stack of five features: B02, B04, B08, NDVI
 - Water pixels (Cluster 0) formed a dense, compact region in feature space
 - Vegetation and land clusters were more dispersed and variable
 - This supports the idea that water features are more spectrally uniform than vegetated areas
+### UMAP (Uniform Manifold Approximation and Projection)
+
+In addition to PCA, we applied UMAP to the same standardized feature stack to better capture **nonlinear structure** in the data. UMAP preserves local relationships, making it particularly effective for understanding how similar or dissimilar clusters are in the high-dimensional space.
+
+The UMAP projection revealed:
+
+- Water-dominant pixels (Cluster 0) formed a large, tight group, confirming strong internal consistency in spectral properties.
+- Vegetated clusters (e.g. Cluster 2) were more scattered and intermixed, reflecting natural spectral variability in land cover.
+- The unusual "swirl" shape in the UMAP plot is typical of nonlinear embedding methods and **does not imply geographic layout**, but rather topological similarity.
+- UMAP helps visually confirm that our unsupervised K-Means model learned meaningful structure in the dataset without requiring labels.
+
+These projections provide a qualitative validation that water and land features occupy separable regions in the feature space — justifying both the choice of input bands and the effectiveness of clustering.
+
 
 ### 4.5 Visual Comparison of Methods
 ```

@@ -66,6 +66,7 @@ Both approaches lead to the same evaluation step: a **confusion matrix, accuracy
 
 ### **Figure 2: Full Remote Sensing + AI Pipeline**
 <img width="499" alt="截屏2025-05-26 19 48 37" src="https://github.com/user-attachments/assets/31f7645c-971a-49af-8e11-153af2a8ae07" />
+<img width="499" alt="截屏2025-05-26 19 48 37" src="https://github.com/user-attachments/assets/e781d8fe-19cb-4855-a4b1-eab20a35b064" />
 
 This more detailed diagram presents the complete flow of the project from start to finish:
 

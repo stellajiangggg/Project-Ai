@@ -5,7 +5,7 @@
 # Mapping Water Bodies and Vegetation with Remote Sensing and Machine Learning
 
 This project uses Sentinel-2 satellite imagery to classify land and water areas using remote sensing techniques and machine learning. We explore the difference between Level-1C (Top-of-Atmosphere) and Level-2A (Surface Reflectance) data, compute NDVI and NDWI indices, and apply clustering (K-Means) and supervised learning (Random Forest) to map features.
-
+##Video:https://www.youtube.com/watch?v=hQT5OtYGeI4 
 ---
 ## Project Overview & Objectives
 ### 1. Problem Statement
